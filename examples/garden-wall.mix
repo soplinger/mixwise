@@ -1,0 +1,35 @@
+# Garden wall and footing: one job file, three mixes.
+# Volumes are wet volumes. Prices are per bag (cement, lime) or per m3 (sand, gravel).
+
+[settings]
+cement_bag_kg = 25
+lime_bag_kg = 25
+currency = $
+
+[mix wall-mortar]
+kind = mortar
+type = S              # ASTM C270 type S, cement : lime : sand = 1 : 1/2 : 4.5
+volume = 800 L
+waste = 5%
+cement_per_bag = 7.20
+lime_per_bag = 5.50
+sand_per_m3 = 45.00
+
+[mix footing]
+kind = concrete
+ratio = 1:2:3        # cement : sand : gravel, by volume
+water_cement = 0.50
+volume = 0.6
+waste = 5%
+batch = 100 L        # one mixer drum
+cement_per_bag = 7.20
+sand_per_m3 = 45.00
+gravel_per_m3 = 60.00
+
+[mix cap-mortar]
+kind = mortar
+ratio = 1:0.25:3     # cement : lime : sand
+volume = 0.1
+cement_per_bag = 7.20
+lime_per_bag = 5.50
+sand_per_m3 = 45.00
